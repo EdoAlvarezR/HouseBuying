@@ -1,10 +1,6 @@
 # HouseBuying
 Calculators for buying a house
 
-
-
-##### GUIs, tools, and tests in Jupyter and Pluto notebooks
-
 Repo Layout
 
     .
