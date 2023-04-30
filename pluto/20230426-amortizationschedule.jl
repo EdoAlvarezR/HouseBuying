@@ -66,7 +66,7 @@ html"""
 # ╔═╡ 28671bc7-b6a3-4665-9be2-5354396a97ea
 begin
 	loanamount_select = 
-		@bind P0 NumberField(50000:5000:600000, default=240000)
+		@bind P0 NumberField(50000:5000:600000, default=264000)
 	program_select = 
 		@bind Y NumberField(1:50, default=15)
 	APR_select = 
@@ -345,7 +345,7 @@ begin
 	| Monthly payment $M$ | $(dol2k(M)) | nominal | custom |
 	| Total paid | $(dol2k(totalbyend; d=0)) | $(dol2k(paymenttot_will; d=0)) | $(dol2k(paymenttot_will_cstm; d=0)) |
 	| Principal paid | $(dol2k(sum(principal); d=0)) | $(dol2k(principaltot_will; d=0)) | $(dol2k(principaltot_will_cstm; d=0)) |
-	| Interest paid | $(dol2k(totalbyend - P0; d=0)) | $(dol2k(interesttot_will; d=0)) | $(dol2k(interesttot_will_cstm; d=0)) |
+	| **Interest paid** | $(dol2k(totalbyend - P0; d=0)) | **$(dol2k(interesttot_will; d=0))** | **$(dol2k(interesttot_will_cstm; d=0))** |
 	| Principal balance | $(dol2k(balance[end]; d=0)) | $(dol2k(balance_will; d=0)) | $(dol2k(balance_will_cstm; d=0)) |
 
 	*Monthly payment $M$ includes only principal and interest* 
