@@ -66,11 +66,11 @@ html"""
 # ╔═╡ 28671bc7-b6a3-4665-9be2-5354396a97ea
 begin
 	loanamount_select = 
-		@bind P0 NumberField(50000:5000:600000, default=264000)
+		@bind P0 NumberField(50000:1000:600000, default=264000)
 	program_select = 
 		@bind Y NumberField(1:50, default=15)
 	APR_select = 
-		@bind APR NumberField(3:0.1:8, default=6.0)
+		@bind APR NumberField(3:0.125:8, default=5.875)
 	
 	endyear_select = 
 		@bind Yend Slider(0:0.5:30, show_value=true, default=4.5)
